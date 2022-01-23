@@ -1,0 +1,312 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Inzane Syllabus Template
+% LaTeX Template
+% Version 1.2 (8.22.2019)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Carmine Spagnuolo (cspagnuolo@unisa.it) with major modifications by 
+% Zane Wolf (zwolf.mlxvi@gmail.com)
+%
+% I (Zane) have left a lot of instructions both in the .tex file and the .cls file that can guide you to customize this document to suite your tastes and requirements. Here is a brief guide: 
+%  - Changing the Main Color: .cls line 39
+%  - Adding more FAQs: .cls line 126 and .tex line 99
+%  - Adding TA emails: uncomment .cls lines 220 & 224 and .tex lines 85 and 89
+%  - Deleting the FAQ sidebar entirely: .tex line 188
+%  - Removing the Lab/TA Info and placing a brief Overview/About section in their place:        uncomment .tex line 91 and .cls line 227, and comment .cls lines for the LAB/TA info        that you no longer want (c. lines 184-227)
+
+%
+% I am also happy to help with crafting/designing modifications to this template to help suite your personal needs in a syllabus. Feel free to reach out! 
+%
+% License:
+% The MIT License (see included LICENSE file)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[letterpaper]{inzane_syllabus} % a4paper for A4
+
+\usepackage{booktabs, colortbl, xcolor}
+\usepackage{tabularx}
+\usepackage{enumitem}
+\usepackage{ltablex} 
+\usepackage{multirow}
+
+\setlist{nolistsep}
+
+\usepackage{lscape}
+\newcolumntype{r}{>{\hsize=0.9\hsize}X}
+\newcolumntype{w}{>{\hsize=0.6\hsize}X}
+\newcolumntype{m}{>{\hsize=.9\hsize}X}
+
+\renewcommand{\familydefault}{\sfdefault}
+\renewcommand{\arraystretch}{2.0}
+%----------------------------------------------------------------------------------------
+%	 PERSONAL INFORMATION
+%----------------------------------------------------------------------------------------
+
+\profilepic{Courant1.jpg} % Profile picture, if the height of the picture is less than that of the cirle, it will have a flat bottom. 
+
+
+% To remove any of the following, you need to comment/delete the lines in the .cls file (c. line 186). Commenting/deleting the lines below will produce an error. 
+
+%To add different lines, you will need to create the new command, e.g. \profPhone, in the .cls file c. line 76, and command to create the line in the side bar in the .cls file c. line 186
+
+\classname{Ordinary Differential Equations} 
+\classnum{Math-UA 262-003\\MA-UY 4204 B} 
+
+%%%%%%%%%%%%%%% PROF INFO
+\profname{Zhuo-Cheng Xiao}
+\officehours{Office Hrs: Mon \& Wed 1-2 pm} 
+\office{Rm 921, WWH (Courant Bldg)}
+\site{\href{https://brightspace.nyu.edu/d2l/home/166539}{\underline{Brightspace}} and \href{https://www.gradescope.com/courses/360869}{\underline{Gradescope}}} 
+\email{zx555@nyu.edu}
+
+%%%%%%%%%%%%%%% COURSE  INFO
+%\prereq{Prereq: Calculus 3 \& Linear Algebra}
+\classdays{Mon \& Wed}
+\classhours{2:00 - 3:15 pm}
+\classloc{194M Rm 203}
+
+%%%%%%%%%%%%%%% recitation INFO
+\labdays{Fri}
+\labhours{???}
+\labloc{???}
+
+%%%%%%%%%%%%%%% TA INFO
+\taAname{???}
+\taAofficehours{Office Hrs:???}
+\taAoffice{???}
+% \taAemail{}
+%\taBname{James}
+%\taBofficehours{Office Hrs: Tues \& Thurs 3-4p}
+%\taBoffice{MCZ 104}
+% \taBemail{}
+
+% \about{Fish make up the largest group of vertebrates on the planet, easily outnumbering mammals, marsupials, birds, and reptiles combined. Not only are they abundant, but they've diversified into an extraordinary array of sizes, shapes, lifestyles, and habitats. You can find them in the coldest, deepest parts of the ocean, and in the hottest freshwater ponds in the desert. This course will explore fish diversity and their biology. } 
+
+
+%---------------------------------------------------------------------------------------
+%	 FAQs
+%----------------------------------------------------------------------------------------
+%to add more questions or remove this section, go to the .cls file and start with lines comment
+%lines 226-250. Also comment out this section as well as line 152(ish), the command \makeSide
+
+\qOne{Why there are incomplete information?}
+\aOne{This is a tentative version of syllabus. TA and recitation information will be added soon.}
+
+\qTwo{}
+\aTwo{}
+
+\qThree{}
+\aThree{}
+
+\qFour{}
+\aFour{}
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+%----------------------------------------------------------------------------------------
+%	 DESCRIPTION
+%----------------------------------------------------------------------------------------
+
+\makeprofile % Print the sidebar
+
+%----------------------------------------------------------------------------------------
+%	 OVERVIEW
+%----------------------------------------------------------------------------------------
+\section{Overview}
+Together, we are involved in one of the most significant human enterprises: describing, analyzing, and predicting the chaotic and unknown future. This course is the first course in ordinary differential equations (ODEs) and an elementary part of a much bigger picture of the dynamical system and applying mathematics to real-world problems.
+
+If predicting the future is a one-million-word novel, then college mathematics such as calculus and linear algebra are ABC about it. Based on that, we will focus on some "grammar" (mathematical theories and proof of ODE) and "making sentences" (solving ODE problems and numerical simulations). I hope this course can also provide a glimpse of more advanced theory courses such as dynamical systems, partial differential equations, and functional analysis, as well as a tryout of solving real-world modelling problems.
+
+%----------------------------------------------------------------------------------------
+%	 READING MATERIAL
+%----------------------------------------------------------------------------------------
+\vspace{0.5cm} %I make liberal use of the \vspace{} command to partition and place sections just how I want them. Alter as you see fit. 
+\section{Materials}
+
+{\color{myCOLOR} Required Texts}\\
+\textit{Differential Equations and Their Applications}. (Braun, 4th edition, 1993, Springer), \textbf{("B")}. \href{https://link.springer.com/book/10.1007/978-1-4612-4360-1#toc}{\underline{Accessible for free}}.  
+
+{\color{myCOLOR} Suggestted Reading}\\
+\textit{Nonlinear Dynamics and Chaos}. (Strogatz, 2nd Edition, 2015, CRC Press), \textbf{("S")} 
+
+%{\color{myCOLOR} Other}\\
+%Any required journal articles and book chapters will be provided on Canvas. 
+
+
+%----------------------------------------------------------------------------------------
+%	 Learning Objectives
+%----------------------------------------------------------------------------------------
+
+\vspace{0.5cm}
+\section{Learning Objectives}
+%use \begin{outline} or \begin{outline}[enumerate] to create a list with subitems. 
+\begin{itemize}
+\item Solving linear first and second-order ODEs, and methods of solving a few types of nonlinear ODEs that have exact solutions
+\item Proving existence and uniqueness of solutions
+\item Analytical skills: Laplace transforms and series solutions
+\item N-dim ODE systems: qualitative analysis for linear/nonlinear systems
+\item Boundary value problems
+\item More analytical skills: Green's functions and Fourier series. (optional)
+
+\end{itemize}
+
+%----------------------------------------------------------------------------------------
+%	 GRADING SCHEME
+%----------------------------------------------------------------------------------------
+\vspace{0.5cm}
+\section{Grading Scheme}
+
+%below is the \twentyshort environment - a list with only two inputs. However, there is a \twenty environment, which creates a list with four inputs. You can find/alter details of that table in the .cls file c. lines 320. 
+\begin{twentyshort}
+	%\twentyitemshort{X\%}{Attendance/Participation}
+	\twentyitemshort{20\%}{Weekly Homework}
+	\twentyitemshort{10\%}{Class Participation}
+    \twentyitemshort{40\%}{Midterm I \& II. 20\% each}
+    \twentyitemshort{30\%}{Final Exam}
+\end{twentyshort}
+
+Grades will follow the standard NYU math scale: 
+\begin{center}
+\begin{tabular}{ p{2.5cm} p{0.7cm} p{0.7cm} p{0.7cm} p{0.7cm} p{0.7cm} p{0.7cm} p{0.7cm} p{0.7cm} p{0.7cm}}
+\hline
+ Letter Grade        & A & A- & B+ & B & B- & C+ & C & D &F \\ 
+ Cutoff              & 93 & 90 & 87 & 83 & 80 & 75 & 65 & 50 & <50  \\
+ \hline 
+\end{tabular}
+\end{center}
+Curving may (or may not) be added to uplift the letter grades during the final evaluation. 
+
+\vspace{0.5cm}
+\section{Exams}
+Two midterms will be in-class. Although exams will be computation extensive, we will tolerate numerical errors provided that the student correctly and concisely demonstrates all computational steps. On the other hand, only a small portion of scores will be granted if only the final answer is provided without any justifications.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                SECOND PAGE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newpage % Start a new page
+
+\makeSide % Print the FAQ sidebar; To get rid of, simply comment out and uncomment \makeFullPage
+
+% \makeFullPage
+\vspace{0.5cm}
+\section{Homework Policy}
+Homework should be submitted as pdf files on \href{https://www.gradescope.com/courses/360869}{Gradescope}, which always dues on \textit{\underline{Monday, 5pm}} unless otherwise specified, and our grader will return your homework grading with an explanation before Saturday. Both handwritten and latex formatted are fine, but the students are responsible for the submitted files' readability and completeness. 
+
+We are all affected by the great uncertainty of life, and I understand that unexpected issues are always popping up. Therefore, the lowest two homework grades will be dropped (including the missed ones). In addition, the "late" deadline for each homework is \textit{\underline{Monday, 11:59pm}} in case of emergent issues. However, submissions after the deadline but before the "late" deadline will receive a grade discounted by 10\%, and submissions will not be accepted after the "late" deadline.  
+
+\vspace{0.5cm}
+\section{Make-up Policy}
+Make-up exams or assignments are allowed in limited scenarios provided that the student gets approval from the instructor \emph{before the due date}. An approval may be granted for typical excuses including medical reasons, religious holidays, and family emergencies.
+
+\vspace{0.5cm}
+\section{Class Participation}
+Students are expected to attend the classes, including recitations. Although attendance will not be strictly recorded, 10\% of the final evaluation is based on class participation, including in-class interactions and discussions. 
+
+Recitations will begin from the second week in Spring 2022. Although there are multiple recitation sessions offered, the students of this section should go to recitation section \#? scheduled on \#?. 
+
+\vspace{0.5cm}
+\section{Other Resources}
+\begin{itemize}
+  \item Tutoring: \href{https://math.nyu.edu/dynamic/undergrad/ba-cas/tutoring/}{\underline{Courant tutoring center}} and the \href{https://www.nyu.edu/students/academic-services/undergraduate-advisement/academic-resource-center/tutoring-and-learning.html}{university tutoring center}.
+  \item \href{https://www.nyu.edu/about/leadership-university-administration/office-of-the-president/office-of-the-provost/university-life/office-of-studentaffairs/student-health-center/moses-center-for-student-accessibility.html}{Moses Center for Student Accessibility} for students with any physical or mental inconveniences.
+\end{itemize}
+
+\vspace{0.5cm}
+\section{Academic Integrity}
+All students are expected to adhere to the codes of academic integrity specified by New York Univerisity.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                COURSE SCHEDULE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\makeFullPage
+\section{Class Schedule}
+
+\begin{center}
+\begin{tabularx}{\textwidth}{p{2cm}p{2cm}p{2.5cm}p{11cm}} %change the width of the comments by changing these cm measurements. Add/substract columns by adding/deleting p{} sections. 
+\arrayrulecolor{myCOLOR}\hline
+\large{Week} & \large{Date} & \large{Section} & \large{Materials}
+\arrayrulecolor{myCOLOR}\hline
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% MODULE 1
+\multicolumn{4}{l}{\textbf{\textcolor{myCOLOR}{\large MODULE 1: First Order Linear Equations}}} \\
+\hline
+% Week & Topic & Readings \\ \hline 
+%%Alternatively, instead of Week #, you can do Class date for meeting
+Week 1 & 01/24 & 1.1-2    & Introduction, Solving first order linear equations \\
+       & 01.26 & 1.2, 1.4 & Separation of variables  \\
+\arrayrulecolor{maingray}\hline
+Week 2 & 01/31 & 1.5-6    & Modelling: Population growth\\
+       & 02/02  & 1.9     & Exact equations \\
+\arrayrulecolor{maingray}\hline
+Week 3 & 02/07 & 1.10-11  & The existence-uniqueness theorem; Iterations\\
+       & 02/09 & 1.11, 1.13& Numerical methods: Euler's methods from Talor expansion \\
+\arrayrulecolor{maingray}\hline
+Week 4 & 02/14 & 1.14-16  & More on nmerical methods: Runge-Kutta\\
+       & 02/16 &          & \textcolor{myCOLOR}{\large Midterm 1} \\
+ \arrayrulecolor{myCOLOR}\hline
+\multicolumn{4}{l}{\textbf{\textcolor{myCOLOR}{\large MODULE 2: Second Order and N-Dimensional Equations }}} \\
+\hline
+Week 5 & 02/21 &          & President Day. No class\\
+       & 02/23 & 2.1      & Second order linear equations \\
+\arrayrulecolor{maingray}\hline
+Week 6 & 02/28 & 2.2-3    & Constant coefficients: homogeneous equations \\
+       & 03/02 & 2.3-5    & Constant coefficients: non-homogeneous equations \\
+\arrayrulecolor{maingray}\hline
+Week 7 & 03/07 & 2.8, 2.8.1      & Series solutions, Singular points \\
+       & 03/09 & 2.8.2-3   & Method of Frobenius, special functions \\
+\arrayrulecolor{maingray}\hline
+Week 8 &       &          & Spring break. No class \\
+ \arrayrulecolor{maingray}\hline
+Week 9 & 03/21 & 3.1      & Solutions of n-dim linear systems \\
+       & 03/23 & 2.6      & Modelling: Oscillator problems \\
+\arrayrulecolor{maingray}\hline
+Week 10 & 03/28 & 3.8      & Linear ODE systems: Eigenvalues and eigenvectors \\
+        & 03/30 & 3.9-10   & Linear ODE systems: Complex \& Equal roots \\
+\arrayrulecolor{maingray}\hline
+Week 11 & 04/04 & 3.11-12  & Linear ODE systems: Matrix solutions \\
+        & 04/06 &          & \textcolor{myCOLOR}{\large Midterm 2} \\
+\arrayrulecolor{myCOLOR}\hline
+\multicolumn{4}{l}{\textbf{\textcolor{myCOLOR}{\large MODULE 3: Qualitative analysis to ODE systems \& More analytical methods }}} \\
+\hline        
+Week 12 & 04/11 & 4.1-3    & Stability \\
+        & 04/13 & 4.4, 4.7 & The phase plane and phase portraits \\
+\arrayrulecolor{maingray}\hline
+Week 13 & 04/18 & 4.6, 4.8 & Qualitative properties of orbits \\
+        & 04/20 & 4.10-13  & Modelling: Populations and epidemiology \\
+\arrayrulecolor{maingray}\hline
+Week 14 & 04/25 & 5.2-3    & Heat equations and Fourier series \\
+        & 04/27 & 6.3-4    & Orthogonal bases, Sturm-Liouville theory \\
+\arrayrulecolor{maingray}\hline
+Week 15 & 05/02 & 2.9-10   & Laplace transfrom \\
+        & 05/04 & 2.11, 3.13  & Application of Laplace transforms \\
+\arrayrulecolor{maingray}\hline
+Week 16 & 05/09 & 2.12-13  & Laplace transfrom, Dirac function, and Green's function \\
+        & undetermined  &  & \textcolor{myCOLOR}{\large Final Exam}\\ 
+\arrayrulecolor{myCOLOR}\hline
+
+\end{tabularx}
+\end{center}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                LAB SCHEDULE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\newpage
+%\section{Lab Schedule}
+
+
+%----------------------------------------------------------------------------------------
+
+\end{document} 
+
+
+
